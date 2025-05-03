@@ -1,0 +1,90 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "creation": "2025-05-03 13:33:29.915133",
+    "calendar_view": 1,
+    "calendar_view_fields": {
+      "start": "start_date",
+      "end": "end_date",
+      "title": "name"
+    },
+    "default_view": "Calendar",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+      "client_name",
+      "start_date",
+      "end_date",
+      "duration",
+      "description",
+      "seller",
+      "status"
+    ],
+    "fields": [
+      {
+        "fieldname": "client_name",
+        "fieldtype": "Data"
+      },
+      {
+        "fieldname": "start_date",
+        "fieldtype": "Datetime",
+        "in_list_view": 1,
+        "label": "Start Date",
+        "reqd": 1
+      },
+      {
+        "fieldname": "end_date",
+        "fieldtype": "Datetime",
+        "in_list_view": 1,
+        "label": "End Date",
+        "read_only": 1,
+        "reqd": 1
+      },
+      {
+        "fieldname": "duration",
+        "fieldtype": "Time"
+      },
+      {
+        "fieldname": "description",
+        "fieldtype": "Small Text"
+      },
+      {
+        "fieldname": "seller",
+        "fieldtype": "Link",
+        "options": "User"
+      },
+      {
+        "fieldname": "status",
+        "fieldtype": "Select",
+        "options": "Scheduled\nFinished\nCanceled"
+      }
+    ],
+    "force_re_route_to_default_view": 1,
+    "index_web_pages_for_search": 1,
+    "is_calendar_and_gantt": 1,
+    "links": [],
+    "modified": "2025-05-03 14:08:44.970890",
+    "modified_by": "Administrator",
+    "module": "Scheduling System",
+    "name": "Appointment",
+    "owner": "Administrator",
+    "permissions": [
+      {
+        "create": 1,
+        "delete": 1,
+        "email": 1,
+        "export": 1,
+        "print": 1,
+        "read": 1,
+        "report": 1,
+        "role": "System Manager",
+        "share": 1,
+        "write": 1
+      }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+  }
+  
