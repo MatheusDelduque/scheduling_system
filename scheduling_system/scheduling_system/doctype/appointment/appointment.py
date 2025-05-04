@@ -15,9 +15,6 @@ class Appointment(Document):
         seller_name = frappe.db.get_value("User", seller_key, "full_name") or seller_key
         client      = self.client_name or ""
         return f"Seller: {seller_name} — Client: {client}"
-    def autoname(self):
-        """Define o nome ao criar o documento usando get_title()."""
-        self.name = self.get_title()
         
     def validate(self):
         """Antes de salvar, recalcula end_date e verifica conflitos."""
