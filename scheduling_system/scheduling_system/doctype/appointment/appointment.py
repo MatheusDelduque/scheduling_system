@@ -26,14 +26,9 @@ class Appointment(Document):
         new_name = self.get_title()
         if self.name != new_name:
             rename_doc(self.doctype, self.name, new_name)
-            # atualiza self.name no objeto para manter o form consistente
+            """ atualiza self.name no objeto para manter o form """
             self.name = new_name
 
-        if self.name != new_name:
-            # Renomeia o documento no banco de dados
-            rename_doc(self.doctype, self.name, new_name)
-            # Atualiza o atributo name em memória para manter o form consistente
-            self.name = new_name
 
     def calculate_end_date(self):
         """Define end_date = start_date + duration."""
